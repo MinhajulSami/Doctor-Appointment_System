@@ -26,7 +26,7 @@ app.use("/api/v1/doctor", require("./routes/doctorRoutes"));
 
 app.use(express.static(path.join(__dirname, "./client/build")));
 
-app.length("*", function(req, res){
+app.get("*", function(req, res){
 res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 //port
